@@ -11,7 +11,18 @@ const Case = {
 }
 
 export const styleBase = StyleSheet.create({
+  conteneur1: {
+    flex: 3,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+  },
+  conteneur2: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+  },
   jour: {
+    flex: 1,
     alignItems:'center',
   },
   titre: {

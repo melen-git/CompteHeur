@@ -1,6 +1,6 @@
 //fichier Accueil.js
 //page d'affichage principale de l'application
-
+//contient des "View" permettant de contenir les élements d'affichage
 
 
 
@@ -20,39 +20,44 @@ export default class Accueil extends React.Component {
 
   render() {
     return (
-      <View >
-        <View style={styleBase.jour}>
-          <View style={styleBase.titre}>
-            <Text>jour 1</Text>
+      <View flex: 1>
+        <View style={styleBase.conteneur1}>
+        //motié superieur page
+          <View style={styleBase.jour}>
+
+            <Text style={styleBase.titre}>jour 1</Text>
+
+            <View style={styleBase.sasie}>
+
+              <Text style={styleBase.titre}>Matin</Text>
+
+              <TextInput
+              style={styleBase.textinput}
+              placeholder='Heure 1'
+              />
+
+              <TextInput
+              style={styleBase.textinput}
+              placeholder='Heure 2'
+              />
+
+              <Text style={styleBase.titre}>Après-midi</Text>
+
+              <TextInput
+              style={styleBase.textinput}
+              placeholder='Heure 3'
+              />
+
+              <TextInput
+              style={styleBase.textinput}
+              placeholder='Heure 4'
+              />
+
+            </View>
           </View>
-          <View style={styleBase.sasie}>
-
-            <Text>Matin</Text>
-
-            <TextInput
-            style={styleBase.textinput}
-            placeholder='Heure 1'
-            />
-
-            <TextInput
-            style={styleBase.textinput}
-            placeholder='Heure 2'
-            />
-
-            <Text>Après-midi</Text>
-
-            <TextInput
-            style={styleBase.textinput}
-            placeholder='Heure 1'
-            />
-
-            <TextInput
-            style={styleBase.textinput}
-            placeholder='Heure 2'
-            />
-
-          </View>
-
+        </View>
+        <View style={styleBase.conteneur2}>
+        //motié inferieur page
         </View>
       </View>
     )
