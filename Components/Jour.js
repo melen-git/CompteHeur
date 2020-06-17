@@ -14,14 +14,15 @@ export default class Jour extends Component {
         <Text style={jour.titre}>Jour 1</Text>
         <View style={jour.saisie}>
           <Text style={jour.text}>AM</Text>
-          <TextInput style={jour.textinput} placeholder='debut'/>
-          <TextInput style={jour.textinput} placeholder='fin'/>
+          <TextInput style={jour.textinput} placeholder='debut' keyboardType={'numeric'} />
+          <TextInput style={jour.textinput} placeholder='fin' keyboardType={'numeric'}/>
           <Text style={jour.text}>    PM</Text>
-          <TextInput style={jour.textinput} placeholder='debut'/>
-          <TextInput style={jour.textinput} placeholder='fin'/>
+          <TextInput style={jour.textinput} placeholder='debut' keyboardType={'numeric'}/>
+          <TextInput style={jour.textinput} placeholder='fin' keyboardType={'numeric'}/>
 
         </View>
       </View>
     );
   }
 }
+//**keyboardType={'numeric'}**
