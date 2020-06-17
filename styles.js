@@ -1,41 +1,73 @@
 import React from 'react';
 import { StyleSheet, View, Text, Button} from 'react-native'
 
-const Case = {
+const Box = {
   backgroundColor: '#DDDDDD',//'#808097'
   borderRadius:5,
   paddingVertical: 5,
   paddingHorizontal: 10,
   marginVertical: 5,
+  marginHorizontal: 10,
+}
+
+const Input = {
+  backgroundColor: '#D0D0D0',//'#808097'
+  borderRadius:5,
+  paddingVertical: 5,
+  paddingHorizontal: 10,
+  marginVertical: 5,
   marginHorizontal: 5,
+  width: 57,
+  height: 35,
 }
 
 export const styleBase = StyleSheet.create({
+  ensemble:{
+  },
   conteneur1: {
-    flex: 2,
     justifyContent: 'space-around',
   },
   conteneur2: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-around',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 });
 
 export const jour = StyleSheet.create({
-  case:{
-    ...Case,
-    flex: 1/5,
+  box:{
+    flex: 1,
+    ...Box,
     alignItems: "center",
   },
   titre:{
     fontWeight: "bold",
+    flex: 1,
   },
   saisie:{
     flexDirection: 'row',
-    flex: 1,
-    
+    flex: 2,
+    alignItems: "center",
+  },
+  text:{},
+  textinput:{
+    ...Input,
+  },
+});
 
+export const cumul = StyleSheet.create({
+  box:{
+    ...Box,
+    width: 150,
+    height: 150,
+    alignItems: "center",
+  },
+  titre:{
+    fontSize: 12,
+  },
+  heures:{
+    fontSize: 40,
+    marginTop: 7,
   },
 });
 
@@ -74,7 +106,7 @@ export const jour = StyleSheet.create({
   },
   Apropos: {
     flex: 1,
-    ...Case,
+    ...Box,
     textAlign: 'center',
     textAlignVertical: 'center',
     color: 'white',

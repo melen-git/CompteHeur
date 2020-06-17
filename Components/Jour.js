@@ -10,13 +10,13 @@ export default class Jour extends Component {
 
   render() {
     return (
-      <View style={jour.case}>
+      <View style={jour.box}>
         <Text style={jour.titre}>Jour 1</Text>
         <View style={jour.saisie}>
-          <Text style={jour.text}>Matin</Text>
+          <Text style={jour.text}>AM</Text>
           <TextInput style={jour.textinput} placeholder='debut'/>
           <TextInput style={jour.textinput} placeholder='fin'/>
-          <Text style={jour.text}>Après-midi</Text>
+          <Text style={jour.text}>    PM</Text>
           <TextInput style={jour.textinput} placeholder='debut'/>
           <TextInput style={jour.textinput} placeholder='fin'/>
 
@@ -25,9 +25,3 @@ export default class Jour extends Component {
     );
   }
 }
-/*
-<TextInput
-style={styleBase.textinput}
-placeholder='Heure 3'
-/>
-*/
