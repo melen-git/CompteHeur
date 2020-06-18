@@ -29,10 +29,6 @@ export default class Accueil extends React.Component {
       >
         <View style={styleBase.conteneur1}>
           <Jour/>
-          <Jour/>
-          <Jour/>
-          <Jour/>
-          <Jour/>
         </View>
         <View style={styleBase.conteneur2}>
           <Cumul/>
