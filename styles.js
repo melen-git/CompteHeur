@@ -39,19 +39,43 @@ export const jour = StyleSheet.create({
     flex: 1,
     ...Box,
     alignItems: "center",
+    flexDirection: 'row',
   },
-  titre:{
-    fontWeight: "bold",
-    flex: 1,
+  gauche:{
+
+  },
+  droite:{
+
   },
   saisie:{
     flexDirection: 'row',
     flex: 2,
     alignItems: "center",
   },
-  text:{},
-  textinput:{
-    ...Input,
+  textDate:{
+    fontWeight: 'bold',
+    fontSize: 17
+  },
+  bouton:{
+    ...Box,
+    backgroundColor: '#D0D0D0',
+    width: 80
+  },
+  boutonDate:{
+    ...Box,
+    backgroundColor: '#D0D0D0',
+    alignItems: 'center'
+  },
+  boutonEnregistre:{
+    ...Box,
+    backgroundColor: '#88B4CE',
+    height: 100,
+    width: 100,
+    alignItems: "center",
+    justifyContent: 'center',
+    borderRadius:50,
+    borderWidth: 2,
+    borderColor: 'white',
   },
 });
 

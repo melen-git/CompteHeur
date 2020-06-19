@@ -1,7 +1,7 @@
 //Component Jour contenant le nom du jour et la saisie des 4 heures journalières
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text,TextInput, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback, View, Image } from 'react-native';
+import { Platform, StyleSheet, Text,TextInput, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback, View, Image, Button } from 'react-native';
 
 import {jour} from '../styles'
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -14,7 +14,7 @@ export default class Jour extends Component {
     show: false,
   }
 
-  setDate(event, date){
+  setDate=(event, date)=>{
     date=date||this.state.state
     this.setSate({
       show: Platform.Os==='ios'?true:false,
@@ -37,28 +37,48 @@ export default class Jour extends Component {
     this.show('time');
   }
 
-  constructor() {
-    super()
-    this.state={
-      isVisible = false;
-    }
-  }
-
-
   render() {
     const {show, date, mode}=this.state;
 
     return (
       <View style={jour.box}>
-        <Text style={jour.titre}>Jour 1</Text>
-        <View style={jour.saisie}>
-          <Button onPress={this.datepicker} title="date" />
-          <Text style={jour.text}>AM</Text>
-          <Button onPress={this.timepicker} title="début" />
-          <Button onPress={this.timepicker} title="fin" />
 
+        <View style={jour.gauche}>
+
+          <TouchableOpacity style={jour.boutonDate} onPress={this.datepicker} >
+            <Text style={jour.textDate}>Ajouter une journée</Text>
+          </TouchableOpacity>
+
+          <View style={jour.saisie}>
+            <Text>De </Text>
+            <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+              <Text>...</Text>
+            </TouchableOpacity>
+            <Text>A </Text>
+            <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+              <Text>...</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={jour.saisie}>
+            <Text>De </Text>
+            <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+              <Text>...</Text>
+            </TouchableOpacity>
+            <Text>A </Text>
+            <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+              <Text>...</Text>
+            </TouchableOpacity>
+          </View>
 
         </View>
+
+        <View style={jour.droite}>
+          <TouchableOpacity style={jour.boutonEnregistre}>
+            <Text style={{color:'white', fontWeight:'bold'}}>Enregistrer</Text>
+          </TouchableOpacity>
+        </View>
+
         {
           show && <DateTimePicker
                     value={date}
@@ -72,3 +92,35 @@ export default class Jour extends Component {
   }
 }
 //**keyboardType={'numeric'}**
+/*
+<View style={jour.box}>
+
+<TouchableOpacity style={jour.boutonDate} onPress={this.datepicker} >
+  <Text>Ajouter une journée</Text>
+</TouchableOpacity>
+
+  <View style={jour.saisie}>
+    <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+      <Text>Début matinée</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+      <Text>Fin matinée</Text>
+    </TouchableOpacity>
+
+  </View>
+  <View style={jour.saisie}>
+    <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+      <Text>Début après-midi</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={jour.bouton} onPress={this.timepicker} >
+      <Text>Fin après-midi</Text>
+    </TouchableOpacity>
+
+
+  </View>
+  <View>
+    <TouchableOpacity style={jour.boutonEnregistre}>
+      <Text>Enregistrer</Text>
+    </TouchableOpacity>
+  </View>
+*/
